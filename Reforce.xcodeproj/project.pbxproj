@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78CD330F07EB40F39F26B0CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B8293A204E47AC8E5732BA /* libPods.a */; };
-		E9B9BF8C1900CF410095A5D8 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */; };
+		E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */; };
 		E9B9BF931900D5E90095A5D8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF8F1900CFFD0095A5D8 /* index.html */; };
 		E9B9BF941900D5E90095A5D8 /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF901900CFFD0095A5D8 /* upload.html */; };
 		E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF971900D8D80095A5D8 /* Presentation.m */; };
@@ -42,8 +42,8 @@
 /* Begin PBXFileReference section */
 		43ED48F8DCAD48B78D5282BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E1B8293A204E47AC8E5732BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9B9BF8A1900CF410095A5D8 /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyHTTPConnection.h; path = Reforce/MyHTTPConnection.h; sourceTree = "<group>"; };
-		E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyHTTPConnection.m; path = Reforce/MyHTTPConnection.m; sourceTree = "<group>"; };
+		E9B9BF8A1900CF410095A5D8 /* RHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RHTTPConnection.h; path = Reforce/RHTTPConnection.h; sourceTree = "<group>"; };
+		E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RHTTPConnection.m; path = Reforce/RHTTPConnection.m; sourceTree = "<group>"; };
 		E9B9BF8F1900CFFD0095A5D8 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		E9B9BF901900CFFD0095A5D8 /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
 		E9B9BF961900D8D80095A5D8 /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presentation.h; path = Reforce/Presentation.h; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		E9B9BF891900CEFB0095A5D8 /* HttpServer */ = {
 			isa = PBXGroup;
 			children = (
-				E9B9BF8A1900CF410095A5D8 /* MyHTTPConnection.h */,
-				E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */,
+				E9B9BF8A1900CF410095A5D8 /* RHTTPConnection.h */,
+				E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */,
 				E9B9BF8E1900CFFD0095A5D8 /* html */,
 			);
 			name = HttpServer;
@@ -342,7 +342,7 @@
 				E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */,
 				E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */,
 				E9D1C6EF1900C5FB00A56604 /* main.m in Sources */,
-				E9B9BF8C1900CF410095A5D8 /* MyHTTPConnection.m in Sources */,
+				E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */,
 				E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,10 +10,10 @@
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
-#import "MyHTTPConnection.h"
+#import "RHTTPConnection.h"
 
 #import <HTTPServer.h>
-#import "MyHTTPConnection.h"
+#import "RHTTPConnection.h"
 
 #import "Presentation.h"
 
@@ -74,7 +74,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [httpServer setPort:5000];
 
-	[httpServer setConnectionClass:[MyHTTPConnection class]];
+	[httpServer setConnectionClass:[RHTTPConnection class]];
 
 	NSError *error = nil;
 	if(![httpServer start:&error])

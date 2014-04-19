@@ -3,10 +3,9 @@
 
 @class MultipartFormDataParser;
 
-@interface MyHTTPConnection : HTTPConnection  {
+@interface RHTTPConnection : HTTPConnection  {
     MultipartFormDataParser*        parser;
-	NSFileHandle*					storeFile;
-	
+    NSFileHandle*					storeFile;
 	NSMutableArray*					uploadedFiles;
 }
 

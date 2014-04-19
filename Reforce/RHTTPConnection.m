@@ -1,5 +1,5 @@
 
-#import "MyHTTPConnection.h"
+#import "RHTTPConnection.h"
 #import "HTTPMessage.h"
 #import "HTTPDataResponse.h"
 #import "DDNumber.h"
@@ -21,14 +21,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
  * All we have to do is override appropriate methods in HTTPConnection.
  **/
 
-@implementation MyHTTPConnection
+@implementation RHTTPConnection
 
 - (BOOL)supportsMethod:(NSString *)method atPath:(NSString *)path
 {
 	HTTPLogTrace();
-	
+
 	// Add support for POST
-	
+
 	if ([method isEqualToString:@"POST"])
 	{
 		if ([path isEqualToString:@"/upload.html"])
@@ -36,16 +36,16 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 			return YES;
 		}
 	}
-	
+
 	return [super supportsMethod:method atPath:path];
 }
 
 - (BOOL)expectsRequestBodyFromMethod:(NSString *)method atPath:(NSString *)path
 {
 	HTTPLogTrace();
-	
+
 	// Inform HTTP server that we expect a body to accompany a POST request
-	
+
 	if([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.html"]) {
         // here we need to make sure, boundary is set in header
         NSString* contentType = [request headerField:@"Content-Type"];
@@ -71,7 +71,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
             }
             NSString* paramName = [param substringWithRange:NSMakeRange(1, paramsSeparator-1)];
             NSString* paramValue = [param substringFromIndex:paramsSeparator+1];
-            
+
             if( [paramName isEqualToString: @"boundary"] ) {
                 // let's separate the boundary from content-type, to make it more handy to handle
                 [request setHeaderField:@"boundary" value:paramValue];
@@ -89,7 +89,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 - (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path
 {
 	HTTPLogTrace();
-	
+
 	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.html"])
 	{
 
@@ -109,14 +109,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		// let download the uploaded files
 		return [[HTTPFileResponse alloc] initWithFilePath: [[config documentRoot] stringByAppendingString:path] forConnection:self];
 	}
-	
+
 	return [super httpResponseForMethod:method URI:path];
 }
 
 - (void)prepareForBodyWithSize:(UInt64)contentLength
 {
 	HTTPLogTrace();
-	
+
 	// set up mime parser
     NSString* boundary = [request headerField:@"boundary"];
     parser = [[MultipartFormDataParser alloc] initWithBoundary:boundary formEncoding:NSUTF8StringEncoding];
@@ -157,7 +157,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 	if (![[NSFileManager defaultManager]fileExistsAtPath:uploadDirPath isDirectory:&isDir ]) {
 		[[NSFileManager defaultManager]createDirectoryAtPath:uploadDirPath withIntermediateDirectories:YES attributes:nil error:nil];
 	}
-	
+
     NSString* filePath = [uploadDirPath stringByAppendingPathComponent: filename];
     if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ) {
         storeFile = nil;
@@ -178,7 +178,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 }
 
 
-- (void) processContent:(NSData*) data WithHeader:(MultipartMessageHeader*) header 
+- (void) processContent:(NSData*) data WithHeader:(MultipartMessageHeader*) header
 {
 	// here we just write the output from parser to the file.
 	if( storeFile ) {
@@ -192,8 +192,6 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 	[storeFile closeFile];
 	storeFile = nil;
 
-    NSLog(@"1");
-    
     if ([uploadedFiles lastObject]) {
         [Presentation uploadZip:[documentsPath stringByAppendingString:[uploadedFiles lastObject]]];
     }
@@ -205,7 +203,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 
 }
 
-- (void) processEpilogueData:(NSData*) data 
+- (void) processEpilogueData:(NSData*) data
 {
     // if we are interested in epilogue data, we could process it here.
 
