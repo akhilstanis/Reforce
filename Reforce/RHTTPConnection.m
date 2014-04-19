@@ -10,6 +10,8 @@
 #import "HTTPDynamicFileResponse.h"
 #import "HTTPFileResponse.h"
 
+#import <GCDAsyncSocket.h>
+
 #import "Presentation.h"
 
 // Log levels : off, error, warn, info, verbose
@@ -108,6 +110,24 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 	if( [method isEqualToString:@"GET"] && [path hasPrefix:@"/upload/"] ) {
 		// let download the uploaded files
 		return [[HTTPFileResponse alloc] initWithFilePath: [[config documentRoot] stringByAppendingString:path] forConnection:self];
+	}
+
+    if( [method isEqualToString:@"GET"] && [path isEqualToString:@"/reforce.js"] ) {
+		// Render the js websocket client script with server address
+
+        NSString *wsLocation;
+		NSString *wsHost = [request headerField:@"Host"];
+		if (wsHost == nil) {
+			NSString *port = [NSString stringWithFormat:@"%hu", [asyncSocket localPort]];
+			wsLocation = [NSString stringWithFormat:@"ws://localhost:%@/reforce", port];
+		} else wsLocation = [NSString stringWithFormat:@"ws://%@/reforce", wsHost];
+
+		NSDictionary *replacementDict = [NSDictionary dictionaryWithObject:wsLocation forKey:@"WEBSOCKET_URL"];
+
+		return [[HTTPDynamicFileResponse alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:@"reforce" ofType:@"js"]
+                                                   forConnection:self
+                                                       separator:@"%%"
+                                           replacementDictionary:replacementDict];
 	}
 
 	return [super httpResponseForMethod:method URI:path];

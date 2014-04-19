@@ -14,6 +14,8 @@
 		E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF971900D8D80095A5D8 /* Presentation.m */; };
 		E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */; };
 		E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9D190123570095A5D8 /* PresentationViewController.m */; };
+		E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
+		E9B9BFA119025E2D0095A5D8 /* reforce.js in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
 		E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
 		E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */; };
 		E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
@@ -52,6 +54,7 @@
 		E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationsTableViewController.m; sourceTree = "<group>"; };
 		E9B9BF9C190123570095A5D8 /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		E9B9BF9D190123570095A5D8 /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		E9B9BF9F19025B8A0095A5D8 /* reforce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = reforce.js; sourceTree = "<group>"; };
 		E9D1C6DF1900C5FB00A56604 /* Reforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C6E21900C5FB00A56604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,7 @@
 			children = (
 				E9B9BF8F1900CFFD0095A5D8 /* index.html */,
 				E9B9BF901900CFFD0095A5D8 /* upload.html */,
+				E9B9BF9F19025B8A0095A5D8 /* reforce.js */,
 			);
 			name = html;
 			path = Reforce/html;
@@ -282,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B9BFA119025E2D0095A5D8 /* reforce.js in Resources */,
 				E9B9BF931900D5E90095A5D8 /* index.html in Resources */,
 				E9B9BF941900D5E90095A5D8 /* upload.html in Resources */,
 				E9D1C6FB1900C5FB00A56604 /* Images.xcassets in Resources */,
@@ -344,6 +349,7 @@
 				E9D1C6EF1900C5FB00A56604 /* main.m in Sources */,
 				E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */,
 				E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */,
+				E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
