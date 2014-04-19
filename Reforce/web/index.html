@@ -1,14 +1,42 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">
-			</head>
-	<body>
-		<form action="upload.html" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-			<input type="file" name="upload1"><br/>
-				<input type="submit" value="Submit">
-					</form>
-		
 
-	</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>WiFi Upload</title>
+            <link rel="stylesheet" href="style.css">
+                <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+                <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+                <script type="text/javascript" src="js/jquery.iframe-transport.js"></script>
+                <script type="text/javascript" src="js/jquery.fileupload.js"></script>
+                <script type="text/javascript" src="js/main.js"></script>
+                </head>
+    <body>
+        <div id="header">
+            <div class="nav">
+                <a class="btn linkBtn" target="_blank"><div class="icon"></div></a>
+                <div class="btn uploadBtn">
+                    <input id="fileupload" type="file" name="files[]" data-url="upload.json" multiple>
+                        +
+                        </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="uploads">
+                <ul></ul>
+            </div>
+
+            <div class="message">
+                <h1>Drop files</h1>
+                <p>
+                Drop files in the window to add them to your iOS device. <br>
+                Or click on the "+" button to use the file picker dialog.
+                </p>
+            </div>
+
+            <div id="footer">
+                <p></p>
+            </div>
+        </div>
+    </body>
 </html>

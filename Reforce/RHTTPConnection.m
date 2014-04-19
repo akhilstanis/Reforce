@@ -34,7 +34,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 
 	if ([method isEqualToString:@"POST"])
 	{
-		if ([path isEqualToString:@"/upload.html"])
+		if ([path isEqualToString:@"/upload.json"])
 		{
 			return YES;
 		}
@@ -49,7 +49,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 
 	// Inform HTTP server that we expect a body to accompany a POST request
 
-	if([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.html"]) {
+	if([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.json"]) {
         // here we need to make sure, boundary is set in header
         NSString* contentType = [request headerField:@"Content-Type"];
         NSUInteger paramsSeparator = [contentType rangeOfString:@";"].location;
@@ -93,24 +93,11 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 {
 	HTTPLogTrace();
 
-	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.html"])
+	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/upload.json"])
 	{
 
-		// this method will generate response with links to uploaded file
-		NSMutableString* filesStr = [[NSMutableString alloc] init];
-
-		for( NSString* filePath in uploadedFiles ) {
-			//generate links
-			[filesStr appendFormat:@"<a href=\"%@\"> %@ </a><br/>",filePath, [filePath lastPathComponent]];
-		}
-		NSString* templatePath = [[config documentRoot] stringByAppendingPathComponent:@"upload.html"];
-		NSDictionary* replacementDict = [NSDictionary dictionaryWithObject:filesStr forKey:@"MyFiles"];
-		// use dynamic file response to apply our links to response template
-		return [[HTTPDynamicFileResponse alloc] initWithFilePath:templatePath forConnection:self separator:@"%" replacementDictionary:replacementDict];
-	}
-	if( [method isEqualToString:@"GET"] && [path hasPrefix:@"/upload/"] ) {
-		// let download the uploaded files
-		return [[HTTPFileResponse alloc] initWithFilePath: [[config documentRoot] stringByAppendingString:path] forConnection:self];
+		NSString* templatePath = [[config documentRoot] stringByAppendingPathComponent:@"upload.json"];
+        return [[HTTPFileResponse alloc] initWithFilePath:templatePath forConnection:self];
 	}
 
     if( [method isEqualToString:@"GET"] && [path isEqualToString:@"/reforce.js"] ) {
