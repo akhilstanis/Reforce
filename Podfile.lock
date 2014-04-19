@@ -8,16 +8,19 @@ PODS:
   - CocoaLumberjack/Core (1.8.1)
   - CocoaLumberjack/Extensions (1.8.1):
     - CocoaLumberjack/Core
+  - JPSVolumeButtonHandler (0.0.1)
   - SSZipArchive (0.3.1)
 
 DEPENDENCIES:
   - CocoaHTTPServer (~> 2.3)
+  - JPSVolumeButtonHandler (~> 0.0)
   - SSZipArchive (~> 0.3)
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 534d09416f992fd51efb23f534742ce70b3a7999
   CocoaHTTPServer: 7c2fce6617f7fda0e3f4fc34f96e562caa7c7bd8
   CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
+  JPSVolumeButtonHandler: 00039752609bdb490e608e4490802088edeba470
   SSZipArchive: 5479ec96c412904a987a3ae3180d65234aa46b6e
 
 COCOAPODS: 0.32.1
