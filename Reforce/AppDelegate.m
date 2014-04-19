@@ -75,7 +75,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [httpServer setType:@"_http._tcp."];
 
-    NSString *docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"] stringByDeletingLastPathComponent];
+    NSString *docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
 	DDLogInfo(@"Setting document root: %@", docRoot);
 
 	[httpServer setDocumentRoot:docRoot];
@@ -98,7 +98,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 }
 
 -(void)resetHttpServerRoot {
-    NSString *docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"] stringByDeletingLastPathComponent];
+    NSString *docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
 	DDLogInfo(@"Setting document root: %@", docRoot);
 
 	[httpServer setDocumentRoot:docRoot];

@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		78CD330F07EB40F39F26B0CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B8293A204E47AC8E5732BA /* libPods.a */; };
 		E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */; };
-		E9B9BF931900D5E90095A5D8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF8F1900CFFD0095A5D8 /* index.html */; };
-		E9B9BF941900D5E90095A5D8 /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF901900CFFD0095A5D8 /* upload.html */; };
 		E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF971900D8D80095A5D8 /* Presentation.m */; };
 		E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */; };
 		E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9D190123570095A5D8 /* PresentationViewController.m */; };
-		E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
-		E9B9BFA119025E2D0095A5D8 /* reforce.js in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
 		E9B9BFA4190260B70095A5D8 /* HTTPServer+Reforce.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */; };
 		E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA6190261C60095A5D8 /* RWebSocket.m */; };
+		E9B9BFB11902AD220095A5D8 /* web in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BFB01902AD220095A5D8 /* web */; };
 		E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
 		E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */; };
 		E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
@@ -48,19 +45,17 @@
 		E1B8293A204E47AC8E5732BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B9BF8A1900CF410095A5D8 /* RHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RHTTPConnection.h; path = Reforce/RHTTPConnection.h; sourceTree = "<group>"; };
 		E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RHTTPConnection.m; path = Reforce/RHTTPConnection.m; sourceTree = "<group>"; };
-		E9B9BF8F1900CFFD0095A5D8 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		E9B9BF901900CFFD0095A5D8 /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
 		E9B9BF961900D8D80095A5D8 /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presentation.h; path = Reforce/Presentation.h; sourceTree = "<group>"; };
 		E9B9BF971900D8D80095A5D8 /* Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presentation.m; path = Reforce/Presentation.m; sourceTree = "<group>"; };
 		E9B9BF991901034D0095A5D8 /* PresentationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationsTableViewController.h; sourceTree = "<group>"; };
 		E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationsTableViewController.m; sourceTree = "<group>"; };
 		E9B9BF9C190123570095A5D8 /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		E9B9BF9D190123570095A5D8 /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
-		E9B9BF9F19025B8A0095A5D8 /* reforce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = reforce.js; sourceTree = "<group>"; };
 		E9B9BFA2190260B70095A5D8 /* HTTPServer+Reforce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HTTPServer+Reforce.h"; path = "Reforce/HTTPServer+Reforce.h"; sourceTree = "<group>"; };
 		E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HTTPServer+Reforce.m"; path = "Reforce/HTTPServer+Reforce.m"; sourceTree = "<group>"; };
 		E9B9BFA5190261C60095A5D8 /* RWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWebSocket.h; path = Reforce/RWebSocket.h; sourceTree = "<group>"; };
 		E9B9BFA6190261C60095A5D8 /* RWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWebSocket.m; path = Reforce/RWebSocket.m; sourceTree = "<group>"; };
+		E9B9BFB01902AD220095A5D8 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web; path = Reforce/web; sourceTree = "<group>"; };
 		E9D1C6DF1900C5FB00A56604 /* Reforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C6E21900C5FB00A56604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,20 +109,9 @@
 				E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */,
 				E9B9BFA5190261C60095A5D8 /* RWebSocket.h */,
 				E9B9BFA6190261C60095A5D8 /* RWebSocket.m */,
-				E9B9BF8E1900CFFD0095A5D8 /* html */,
+				E9B9BFB01902AD220095A5D8 /* web */,
 			);
 			name = HttpServer;
-			sourceTree = "<group>";
-		};
-		E9B9BF8E1900CFFD0095A5D8 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				E9B9BF8F1900CFFD0095A5D8 /* index.html */,
-				E9B9BF901900CFFD0095A5D8 /* upload.html */,
-				E9B9BF9F19025B8A0095A5D8 /* reforce.js */,
-			);
-			name = html;
-			path = Reforce/html;
 			sourceTree = "<group>";
 		};
 		E9B9BF951900D89C0095A5D8 /* Classes */ = {
@@ -296,10 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B9BFA119025E2D0095A5D8 /* reforce.js in Resources */,
-				E9B9BF931900D5E90095A5D8 /* index.html in Resources */,
-				E9B9BF941900D5E90095A5D8 /* upload.html in Resources */,
 				E9D1C6FB1900C5FB00A56604 /* Images.xcassets in Resources */,
+				E9B9BFB11902AD220095A5D8 /* web in Resources */,
 				E9D1C6ED1900C5FB00A56604 /* InfoPlist.strings in Resources */,
 				E9D1C6F61900C5FB00A56604 /* Main.storyboard in Resources */,
 			);
@@ -360,7 +342,6 @@
 				E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */,
 				E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */,
 				E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */,
-				E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */,
 				E9B9BFA4190260B70095A5D8 /* HTTPServer+Reforce.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
