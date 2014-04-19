@@ -11,6 +11,7 @@
 #import "HTTPFileResponse.h"
 
 #import <GCDAsyncSocket.h>
+#import "RWebSocket.h"
 
 #import "Presentation.h"
 
@@ -131,6 +132,16 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 	}
 
 	return [super httpResponseForMethod:method URI:path];
+}
+
+- (WebSocket *)webSocketForURI:(NSString *)path
+{
+	if([path isEqualToString:@"/reforce"]) {
+		HTTPLogInfo(@"MyHTTPConnection: Creating RWebSocket...");
+		return [[RWebSocket alloc] initWithRequest:request socket:asyncSocket];
+	}
+
+	return [super webSocketForURI:path];
 }
 
 - (void)prepareForBodyWithSize:(UInt64)contentLength

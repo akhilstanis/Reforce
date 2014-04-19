@@ -12,7 +12,7 @@
 #import "DDTTYLogger.h"
 #import "RHTTPConnection.h"
 
-#import <HTTPServer.h>
+#import "HTTPServer+Reforce.h"
 #import "RHTTPConnection.h"
 
 #import "Presentation.h"

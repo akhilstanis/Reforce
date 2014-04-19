@@ -16,6 +16,8 @@
 		E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9D190123570095A5D8 /* PresentationViewController.m */; };
 		E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
 		E9B9BFA119025E2D0095A5D8 /* reforce.js in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF9F19025B8A0095A5D8 /* reforce.js */; };
+		E9B9BFA4190260B70095A5D8 /* HTTPServer+Reforce.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */; };
+		E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA6190261C60095A5D8 /* RWebSocket.m */; };
 		E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
 		E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */; };
 		E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
@@ -55,6 +57,10 @@
 		E9B9BF9C190123570095A5D8 /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		E9B9BF9D190123570095A5D8 /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		E9B9BF9F19025B8A0095A5D8 /* reforce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = reforce.js; sourceTree = "<group>"; };
+		E9B9BFA2190260B70095A5D8 /* HTTPServer+Reforce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HTTPServer+Reforce.h"; path = "Reforce/HTTPServer+Reforce.h"; sourceTree = "<group>"; };
+		E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HTTPServer+Reforce.m"; path = "Reforce/HTTPServer+Reforce.m"; sourceTree = "<group>"; };
+		E9B9BFA5190261C60095A5D8 /* RWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWebSocket.h; path = Reforce/RWebSocket.h; sourceTree = "<group>"; };
+		E9B9BFA6190261C60095A5D8 /* RWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWebSocket.m; path = Reforce/RWebSocket.m; sourceTree = "<group>"; };
 		E9D1C6DF1900C5FB00A56604 /* Reforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C6E21900C5FB00A56604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +110,10 @@
 			children = (
 				E9B9BF8A1900CF410095A5D8 /* RHTTPConnection.h */,
 				E9B9BF8B1900CF410095A5D8 /* RHTTPConnection.m */,
+				E9B9BFA2190260B70095A5D8 /* HTTPServer+Reforce.h */,
+				E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */,
+				E9B9BFA5190261C60095A5D8 /* RWebSocket.h */,
+				E9B9BFA6190261C60095A5D8 /* RWebSocket.m */,
 				E9B9BF8E1900CFFD0095A5D8 /* html */,
 			);
 			name = HttpServer;
@@ -347,9 +357,11 @@
 				E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */,
 				E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */,
 				E9D1C6EF1900C5FB00A56604 /* main.m in Sources */,
+				E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */,
 				E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */,
 				E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */,
 				E9B9BFA019025B8A0095A5D8 /* reforce.js in Sources */,
+				E9B9BFA4190260B70095A5D8 /* HTTPServer+Reforce.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
