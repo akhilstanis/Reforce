@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78CD330F07EB40F39F26B0CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B8293A204E47AC8E5732BA /* libPods.a */; };
+		E9B9BF8C1900CF410095A5D8 /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */; };
+		E9B9BF931900D5E90095A5D8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF8F1900CFFD0095A5D8 /* index.html */; };
+		E9B9BF941900D5E90095A5D8 /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BF901900CFFD0095A5D8 /* upload.html */; };
+		E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF971900D8D80095A5D8 /* Presentation.m */; };
+		E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */; };
+		E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BF9D190123570095A5D8 /* PresentationViewController.m */; };
+		E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
+		E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */; };
+		E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
+		E9D1C6ED1900C5FB00A56604 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C6EB1900C5FB00A56604 /* InfoPlist.strings */; };
+		E9D1C6EF1900C5FB00A56604 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C6EE1900C5FB00A56604 /* main.m */; };
+		E9D1C6F31900C5FB00A56604 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C6F21900C5FB00A56604 /* AppDelegate.m */; };
+		E9D1C6F61900C5FB00A56604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C6F41900C5FB00A56604 /* Main.storyboard */; };
+		E9D1C6FB1900C5FB00A56604 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C6FA1900C5FB00A56604 /* Images.xcassets */; };
+		E9D1C7021900C5FB00A56604 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C7011900C5FB00A56604 /* XCTest.framework */; };
+		E9D1C7031900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
+		E9D1C7041900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
+		E9D1C70C1900C5FB00A56604 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C70A1900C5FB00A56604 /* InfoPlist.strings */; };
+		E9D1C70E1900C5FB00A56604 /* ReforceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C70D1900C5FB00A56604 /* ReforceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9D1C7051900C5FB00A56604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9D1C6D71900C5FB00A56604 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9D1C6DE1900C5FB00A56604;
+			remoteInfo = Reforce;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43ED48F8DCAD48B78D5282BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E1B8293A204E47AC8E5732BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B9BF8A1900CF410095A5D8 /* MyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyHTTPConnection.h; path = Reforce/MyHTTPConnection.h; sourceTree = "<group>"; };
+		E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyHTTPConnection.m; path = Reforce/MyHTTPConnection.m; sourceTree = "<group>"; };
+		E9B9BF8F1900CFFD0095A5D8 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		E9B9BF901900CFFD0095A5D8 /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
+		E9B9BF961900D8D80095A5D8 /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presentation.h; path = Reforce/Presentation.h; sourceTree = "<group>"; };
+		E9B9BF971900D8D80095A5D8 /* Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presentation.m; path = Reforce/Presentation.m; sourceTree = "<group>"; };
+		E9B9BF991901034D0095A5D8 /* PresentationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationsTableViewController.h; sourceTree = "<group>"; };
+		E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationsTableViewController.m; sourceTree = "<group>"; };
+		E9B9BF9C190123570095A5D8 /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
+		E9B9BF9D190123570095A5D8 /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		E9D1C6DF1900C5FB00A56604 /* Reforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D1C6E21900C5FB00A56604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E9D1C6E61900C5FB00A56604 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E9D1C6EA1900C5FB00A56604 /* Reforce-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reforce-Info.plist"; sourceTree = "<group>"; };
+		E9D1C6EC1900C5FB00A56604 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9D1C6EE1900C5FB00A56604 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9D1C6F01900C5FB00A56604 /* Reforce-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reforce-Prefix.pch"; sourceTree = "<group>"; };
+		E9D1C6F11900C5FB00A56604 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9D1C6F21900C5FB00A56604 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9D1C6F51900C5FB00A56604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9D1C6FA1900C5FB00A56604 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E9D1C7001900C5FB00A56604 /* ReforceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReforceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D1C7011900C5FB00A56604 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E9D1C7091900C5FB00A56604 /* ReforceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReforceTests-Info.plist"; sourceTree = "<group>"; };
+		E9D1C70B1900C5FB00A56604 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9D1C70D1900C5FB00A56604 /* ReforceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReforceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9D1C6DC1900C5FB00A56604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */,
+				E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */,
+				E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */,
+				78CD330F07EB40F39F26B0CC /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D1C6FD1900C5FB00A56604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D1C7021900C5FB00A56604 /* XCTest.framework in Frameworks */,
+				E9D1C7041900C5FB00A56604 /* UIKit.framework in Frameworks */,
+				E9D1C7031900C5FB00A56604 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9B9BF891900CEFB0095A5D8 /* HttpServer */ = {
+			isa = PBXGroup;
+			children = (
+				E9B9BF8A1900CF410095A5D8 /* MyHTTPConnection.h */,
+				E9B9BF8B1900CF410095A5D8 /* MyHTTPConnection.m */,
+				E9B9BF8E1900CFFD0095A5D8 /* html */,
+			);
+			name = HttpServer;
+			sourceTree = "<group>";
+		};
+		E9B9BF8E1900CFFD0095A5D8 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				E9B9BF8F1900CFFD0095A5D8 /* index.html */,
+				E9B9BF901900CFFD0095A5D8 /* upload.html */,
+			);
+			name = html;
+			path = Reforce/html;
+			sourceTree = "<group>";
+		};
+		E9B9BF951900D89C0095A5D8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E9B9BF961900D8D80095A5D8 /* Presentation.h */,
+				E9B9BF971900D8D80095A5D8 /* Presentation.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E9D1C6D61900C5FB00A56604 = {
+			isa = PBXGroup;
+			children = (
+				E9B9BF951900D89C0095A5D8 /* Classes */,
+				E9D1C6E81900C5FB00A56604 /* Reforce */,
+				E9B9BF891900CEFB0095A5D8 /* HttpServer */,
+				E9D1C7071900C5FB00A56604 /* ReforceTests */,
+				E9D1C6E11900C5FB00A56604 /* Frameworks */,
+				E9D1C6E01900C5FB00A56604 /* Products */,
+				43ED48F8DCAD48B78D5282BB /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E9D1C6E01900C5FB00A56604 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C6DF1900C5FB00A56604 /* Reforce.app */,
+				E9D1C7001900C5FB00A56604 /* ReforceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9D1C6E11900C5FB00A56604 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C6E21900C5FB00A56604 /* Foundation.framework */,
+				E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */,
+				E9D1C6E61900C5FB00A56604 /* UIKit.framework */,
+				E9D1C7011900C5FB00A56604 /* XCTest.framework */,
+				E1B8293A204E47AC8E5732BA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9D1C6E81900C5FB00A56604 /* Reforce */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C6F11900C5FB00A56604 /* AppDelegate.h */,
+				E9D1C6F21900C5FB00A56604 /* AppDelegate.m */,
+				E9D1C6F41900C5FB00A56604 /* Main.storyboard */,
+				E9D1C6FA1900C5FB00A56604 /* Images.xcassets */,
+				E9D1C6E91900C5FB00A56604 /* Supporting Files */,
+				E9B9BF991901034D0095A5D8 /* PresentationsTableViewController.h */,
+				E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */,
+				E9B9BF9C190123570095A5D8 /* PresentationViewController.h */,
+				E9B9BF9D190123570095A5D8 /* PresentationViewController.m */,
+			);
+			path = Reforce;
+			sourceTree = "<group>";
+		};
+		E9D1C6E91900C5FB00A56604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C6EA1900C5FB00A56604 /* Reforce-Info.plist */,
+				E9D1C6EB1900C5FB00A56604 /* InfoPlist.strings */,
+				E9D1C6EE1900C5FB00A56604 /* main.m */,
+				E9D1C6F01900C5FB00A56604 /* Reforce-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9D1C7071900C5FB00A56604 /* ReforceTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C70D1900C5FB00A56604 /* ReforceTests.m */,
+				E9D1C7081900C5FB00A56604 /* Supporting Files */,
+			);
+			path = ReforceTests;
+			sourceTree = "<group>";
+		};
+		E9D1C7081900C5FB00A56604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C7091900C5FB00A56604 /* ReforceTests-Info.plist */,
+				E9D1C70A1900C5FB00A56604 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9D1C6DE1900C5FB00A56604 /* Reforce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9D1C7111900C5FB00A56604 /* Build configuration list for PBXNativeTarget "Reforce" */;
+			buildPhases = (
+				FC160061E4544DBDBE8CCCA9 /* Check Pods Manifest.lock */,
+				E9D1C6DB1900C5FB00A56604 /* Sources */,
+				E9D1C6DC1900C5FB00A56604 /* Frameworks */,
+				E9D1C6DD1900C5FB00A56604 /* Resources */,
+				1BE8D67A17844E70A30E3DFF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reforce;
+			productName = Reforce;
+			productReference = E9D1C6DF1900C5FB00A56604 /* Reforce.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9D1C6FF1900C5FB00A56604 /* ReforceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9D1C7141900C5FB00A56604 /* Build configuration list for PBXNativeTarget "ReforceTests" */;
+			buildPhases = (
+				E9D1C6FC1900C5FB00A56604 /* Sources */,
+				E9D1C6FD1900C5FB00A56604 /* Frameworks */,
+				E9D1C6FE1900C5FB00A56604 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9D1C7061900C5FB00A56604 /* PBXTargetDependency */,
+			);
+			name = ReforceTests;
+			productName = ReforceTests;
+			productReference = E9D1C7001900C5FB00A56604 /* ReforceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9D1C6D71900C5FB00A56604 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Akhil Stanislavose";
+				TargetAttributes = {
+					E9D1C6FF1900C5FB00A56604 = {
+						TestTargetID = E9D1C6DE1900C5FB00A56604;
+					};
+				};
+			};
+			buildConfigurationList = E9D1C6DA1900C5FB00A56604 /* Build configuration list for PBXProject "Reforce" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9D1C6D61900C5FB00A56604;
+			productRefGroup = E9D1C6E01900C5FB00A56604 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9D1C6DE1900C5FB00A56604 /* Reforce */,
+				E9D1C6FF1900C5FB00A56604 /* ReforceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9D1C6DD1900C5FB00A56604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B9BF931900D5E90095A5D8 /* index.html in Resources */,
+				E9B9BF941900D5E90095A5D8 /* upload.html in Resources */,
+				E9D1C6FB1900C5FB00A56604 /* Images.xcassets in Resources */,
+				E9D1C6ED1900C5FB00A56604 /* InfoPlist.strings in Resources */,
+				E9D1C6F61900C5FB00A56604 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D1C6FE1900C5FB00A56604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D1C70C1900C5FB00A56604 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BE8D67A17844E70A30E3DFF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC160061E4544DBDBE8CCCA9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9D1C6DB1900C5FB00A56604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D1C6F31900C5FB00A56604 /* AppDelegate.m in Sources */,
+				E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */,
+				E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */,
+				E9D1C6EF1900C5FB00A56604 /* main.m in Sources */,
+				E9B9BF8C1900CF410095A5D8 /* MyHTTPConnection.m in Sources */,
+				E9B9BF981900D8D80095A5D8 /* Presentation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D1C6FC1900C5FB00A56604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D1C70E1900C5FB00A56604 /* ReforceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9D1C7061900C5FB00A56604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9D1C6DE1900C5FB00A56604 /* Reforce */;
+			targetProxy = E9D1C7051900C5FB00A56604 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9D1C6EB1900C5FB00A56604 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D1C6EC1900C5FB00A56604 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E9D1C6F41900C5FB00A56604 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D1C6F51900C5FB00A56604 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9D1C70A1900C5FB00A56604 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D1C70B1900C5FB00A56604 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9D1C70F1900C5FB00A56604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vishnu Gopal (9W5B2P4YRQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vishnu Gopal (9W5B2P4YRQ)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "74E95BA7-EF84-45AD-ABC7-F6F0E1A4FCBB";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E9D1C7101900C5FB00A56604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "74E95BA7-EF84-45AD-ABC7-F6F0E1A4FCBB";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9D1C7121900C5FB00A56604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43ED48F8DCAD48B78D5282BB /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reforce/Reforce-Prefix.pch";
+				INFOPLIST_FILE = "Reforce/Reforce-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E9D1C7131900C5FB00A56604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43ED48F8DCAD48B78D5282BB /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reforce/Reforce-Prefix.pch";
+				INFOPLIST_FILE = "Reforce/Reforce-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E9D1C7151900C5FB00A56604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reforce.app/Reforce";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reforce/Reforce-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ReforceTests/ReforceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E9D1C7161900C5FB00A56604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reforce.app/Reforce";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reforce/Reforce-Prefix.pch";
+				INFOPLIST_FILE = "ReforceTests/ReforceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9D1C6DA1900C5FB00A56604 /* Build configuration list for PBXProject "Reforce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D1C70F1900C5FB00A56604 /* Debug */,
+				E9D1C7101900C5FB00A56604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9D1C7111900C5FB00A56604 /* Build configuration list for PBXNativeTarget "Reforce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D1C7121900C5FB00A56604 /* Debug */,
+				E9D1C7131900C5FB00A56604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9D1C7141900C5FB00A56604 /* Build configuration list for PBXNativeTarget "ReforceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D1C7151900C5FB00A56604 /* Debug */,
+				E9D1C7161900C5FB00A56604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9D1C6D71900C5FB00A56604 /* Project object */;
+}
