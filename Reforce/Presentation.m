@@ -36,6 +36,20 @@ static id _delegate;
     [SSZipArchive unzipFileAtPath:path toDestination:presentationDir];
     [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 
+    NSString *indexPath = [presentationDir stringByAppendingPathComponent:@"index.html"];
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:indexPath]) {
+        [[NSFileManager defaultManager] removeItemAtPath:presentationDir error:nil];
+        return NO;
+    }
+
+    NSMutableString *indexContent = [NSMutableString stringWithContentsOfFile: indexPath encoding:NSASCIIStringEncoding error:&err];
+    [indexContent replaceOccurrencesOfString:@"</body>"
+                                  withString:@"<script src='reforce.js'></script></body>"
+                                     options:NSCaseInsensitiveSearch
+                                       range:NSMakeRange(0, [indexContent length])];
+    [indexContent writeToFile:indexPath atomically:YES encoding:NSASCIIStringEncoding error:&err];
+
     if(_delegate && [_delegate respondsToSelector:@selector(newPresentaionUploaded:)])
         [_delegate performSelector:@selector(newPresentaionUploaded:) withObject:[[Presentation alloc] initWithPath:presentationDir]];
 
