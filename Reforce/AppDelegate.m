@@ -17,17 +17,22 @@
 
 #import "Presentation.h"
 
+#import <JPSVolumeButtonHandler.h>
+
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    JPSVolumeButtonHandler *_volumeButtonHandler;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
 
     [self setupHttpServer];
+    [self setupVolumeButtons];
 
     return YES;
 }
@@ -42,11 +47,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [httpServer stop];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [httpServer start:nil];
+    [self setupVolumeButtons];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -95,5 +103,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 	[httpServer setDocumentRoot:docRoot];
 }
+
+- (void)setupVolumeButtons
+{
+    _volumeButtonHandler = [JPSVolumeButtonHandler volumeButtonHandlerWithUpBlock:^{
+        [httpServer sendMessageToWebsockets:@"r"];
+    } downBlock:^{
+        [httpServer sendMessageToWebsockets:@"l"];
+    }];
+}
+
 
 @end

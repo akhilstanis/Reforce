@@ -10,6 +10,6 @@
 
 @interface HTTPServer (Reforce)
 
--(NSArray *) webSocketConnections;
+-(void) sendMessageToWebsockets:(NSString *) message;
 
 @end

@@ -7,11 +7,14 @@
 //
 
 #import "HTTPServer+Reforce.h"
+#import "RWebSocket.h"
 
 @implementation HTTPServer (Reforce)
 
--(NSArray *)webSocketConnections {
-    return webSockets;
+-(void)sendMessageToWebsockets:(NSString *)message {
+    [webSockets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [((RWebSocket *) obj) sendMessage:message];
+    }];
 }
 
 @end
