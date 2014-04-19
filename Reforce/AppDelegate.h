@@ -16,4 +16,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void) setHttpServerRootTo:(NSString *) path;
+-(void) resetHttpServerRoot;
+
 @end

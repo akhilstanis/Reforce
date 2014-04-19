@@ -7,6 +7,7 @@
 //
 
 #import "PresentationViewController.h"
+#import "AppDelegate.h"
 
 @interface PresentationViewController ()
 
@@ -22,6 +23,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] setHttpServerRootTo:self.presentation.path];
+
     [self configureView];
 }
 
@@ -35,6 +38,10 @@
     if (sender.value == 100.0)
         [self dismissViewControllerAnimated:YES completion:nil];
 
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] resetHttpServerRoot];
 }
 
 @end

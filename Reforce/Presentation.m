@@ -10,9 +10,7 @@
 
 #import <SSZipArchive.h>
 
-@implementation Presentation {
-    NSString *_path;
-}
+@implementation Presentation
 
 // Class Methods
 
@@ -54,8 +52,8 @@ static id _delegate;
                                                                            error:&err];
 
     NSMutableArray *presentations = [NSMutableArray array];
-    for (NSString *presentationPath in contents)
-        [presentations addObject:[[Presentation alloc] initWithPath:presentationPath]];
+    for (NSURL *presentationPath in contents)
+        [presentations addObject:[[Presentation alloc] initWithPath:[presentationPath path]]];
 
     return presentations;
 }

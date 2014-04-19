@@ -21,5 +21,6 @@
 -(BOOL) destroy;
 
 @property (strong, nonatomic) NSString* title;
+@property (strong, nonatomic) NSString* path;
 
 @end
