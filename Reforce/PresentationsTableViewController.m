@@ -21,7 +21,6 @@
     NSMutableArray *_presentations;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,7 +35,14 @@
 
     _presentations = [[Presentation all] mutableCopy];
 
-    [Presentation setDelegate:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(newPresentaionUploaded:)
+                                                 name:@"newPresentaionUploaded"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(invalidPresentaionUploaded:)
+                                                 name:@"invalidPresentaionUploaded"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,12 +52,23 @@
 }
 
 
--(void)newPresentaionUploaded:(Presentation *) presentation {
-    [_presentations insertObject:presentation atIndex:0];
+-(void)newPresentaionUploaded:(NSNotification *) notification {
+    [_presentations insertObject:[notification object] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+-(void) invalidPresentaionUploaded:(NSNotification *) notification {
+    [[[UIAlertView alloc] initWithTitle:@"Invalid Upload"
+                               message:@"You seemed to have uploaded an invalid presentation archive. Please upload a zip archive with index.html at root level."
+                              delegate:nil
+                     cancelButtonTitle:@"OK"
+                     otherButtonTitles:nil] show];
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - Table view data source
 

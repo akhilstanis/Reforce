@@ -15,7 +15,6 @@
 
 +(BOOL) uploadZip:(NSString *) path;
 +(NSArray *) all;
-+(void) setDelegate:(id) delegate;
 
 -(Presentation *) initWithPath:(NSString *) path;
 -(BOOL) destroy;

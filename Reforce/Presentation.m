@@ -14,12 +14,6 @@
 
 // Class Methods
 
-static id _delegate;
-
-+(void)setDelegate:(id)delegate {
-    _delegate = delegate;
-}
-
 +(BOOL)uploadZip:(NSString *)path {
     if (![path hasSuffix:@".zip"])
         return NO;
@@ -40,6 +34,9 @@ static id _delegate;
 
     if (![[NSFileManager defaultManager] fileExistsAtPath:indexPath]) {
         [[NSFileManager defaultManager] removeItemAtPath:presentationDir error:nil];
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"invalidPresentaionUploaded" object:nil];
+
         return NO;
     }
 
@@ -50,8 +47,8 @@ static id _delegate;
                                        range:NSMakeRange(0, [indexContent length])];
     [indexContent writeToFile:indexPath atomically:YES encoding:NSASCIIStringEncoding error:&err];
 
-    if(_delegate && [_delegate respondsToSelector:@selector(newPresentaionUploaded:)])
-        [_delegate performSelector:@selector(newPresentaionUploaded:) withObject:[[Presentation alloc] initWithPath:presentationDir]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPresentaionUploaded"
+                                                        object:[[Presentation alloc] initWithPath:presentationDir]];
 
     return YES;
 }
