@@ -35,7 +35,9 @@
     if (![[NSFileManager defaultManager] fileExistsAtPath:indexPath]) {
         [[NSFileManager defaultManager] removeItemAtPath:presentationDir error:nil];
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"invalidPresentaionUploaded" object:nil];
+        dispatch_async(dispatch_get_main_queue(),^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"invalidPresentaionUploaded" object:nil];
+        });
 
         return NO;
     }
@@ -47,8 +49,10 @@
                                        range:NSMakeRange(0, [indexContent length])];
     [indexContent writeToFile:indexPath atomically:YES encoding:NSASCIIStringEncoding error:&err];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPresentaionUploaded"
-                                                        object:[[Presentation alloc] initWithPath:presentationDir]];
+    dispatch_async(dispatch_get_main_queue(),^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"newPresentaionUploaded"
+                                                            object:[[Presentation alloc] initWithPath:presentationDir]];
+    });
 
     return YES;
 }
