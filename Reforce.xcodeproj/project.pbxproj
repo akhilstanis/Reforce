@@ -15,6 +15,8 @@
 		E9B9BFA4190260B70095A5D8 /* HTTPServer+Reforce.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA3190260B70095A5D8 /* HTTPServer+Reforce.m */; };
 		E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFA6190261C60095A5D8 /* RWebSocket.m */; };
 		E9B9BFB11902AD220095A5D8 /* web in Resources */ = {isa = PBXBuildFile; fileRef = E9B9BFB01902AD220095A5D8 /* web */; };
+		E9B9BFB41904C0800095A5D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFB31904C0800095A5D8 /* SettingsViewController.m */; };
+		E9B9BFB71904DB980095A5D8 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9BFB61904DB980095A5D8 /* Settings.m */; };
 		E9D1C6E31900C5FB00A56604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E21900C5FB00A56604 /* Foundation.framework */; };
 		E9D1C6E51900C5FB00A56604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */; };
 		E9D1C6E71900C5FB00A56604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D1C6E61900C5FB00A56604 /* UIKit.framework */; };
@@ -56,6 +58,10 @@
 		E9B9BFA5190261C60095A5D8 /* RWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWebSocket.h; path = Reforce/RWebSocket.h; sourceTree = "<group>"; };
 		E9B9BFA6190261C60095A5D8 /* RWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWebSocket.m; path = Reforce/RWebSocket.m; sourceTree = "<group>"; };
 		E9B9BFB01902AD220095A5D8 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web; path = Reforce/web; sourceTree = "<group>"; };
+		E9B9BFB21904C0800095A5D8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		E9B9BFB31904C0800095A5D8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E9B9BFB51904DB980095A5D8 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Reforce/Settings.h; sourceTree = "<group>"; };
+		E9B9BFB61904DB980095A5D8 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Reforce/Settings.m; sourceTree = "<group>"; };
 		E9D1C6DF1900C5FB00A56604 /* Reforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C6E21900C5FB00A56604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D1C6E41900C5FB00A56604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +125,8 @@
 			children = (
 				E9B9BF961900D8D80095A5D8 /* Presentation.h */,
 				E9B9BF971900D8D80095A5D8 /* Presentation.m */,
+				E9B9BFB51904DB980095A5D8 /* Settings.h */,
+				E9B9BFB61904DB980095A5D8 /* Settings.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -167,6 +175,8 @@
 				E9D1C6E91900C5FB00A56604 /* Supporting Files */,
 				E9B9BF991901034D0095A5D8 /* PresentationsTableViewController.h */,
 				E9B9BF9A1901034D0095A5D8 /* PresentationsTableViewController.m */,
+				E9B9BFB21904C0800095A5D8 /* SettingsViewController.h */,
+				E9B9BFB31904C0800095A5D8 /* SettingsViewController.m */,
 				E9B9BF9C190123570095A5D8 /* PresentationViewController.h */,
 				E9B9BF9D190123570095A5D8 /* PresentationViewController.m */,
 			);
@@ -337,7 +347,9 @@
 			files = (
 				E9D1C6F31900C5FB00A56604 /* AppDelegate.m in Sources */,
 				E9B9BF9B1901034D0095A5D8 /* PresentationsTableViewController.m in Sources */,
+				E9B9BFB71904DB980095A5D8 /* Settings.m in Sources */,
 				E9B9BF9E190123570095A5D8 /* PresentationViewController.m in Sources */,
+				E9B9BFB41904C0800095A5D8 /* SettingsViewController.m in Sources */,
 				E9D1C6EF1900C5FB00A56604 /* main.m in Sources */,
 				E9B9BFA7190261C60095A5D8 /* RWebSocket.m in Sources */,
 				E9B9BF8C1900CF410095A5D8 /* RHTTPConnection.m in Sources */,

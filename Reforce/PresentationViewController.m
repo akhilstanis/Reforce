@@ -9,13 +9,17 @@
 #import "PresentationViewController.h"
 #import "AppDelegate.h"
 
+#import "Settings.h"
+
 @interface PresentationViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
-@implementation PresentationViewController
+@implementation PresentationViewController {
+    AppDelegate *appDelegate;
+}
 
 
 - (void)viewDidLoad
@@ -23,7 +27,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    [(AppDelegate *)[[UIApplication sharedApplication] delegate] setHttpServerRootTo:self.presentation.path];
+    appDelegate = [[UIApplication sharedApplication] delegate];
+
+    [appDelegate setHttpServerRootTo:self.presentation.path];
+    [appDelegate startHttpServer];
 
     [self configureView];
 }
@@ -33,15 +40,15 @@
         self.titleLabel.text = self.presentation.title;
 }
 
-
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     if (sender.value == 100.0)
         [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 
--(void)viewDidDisappear:(BOOL)animated {
-    [(AppDelegate *)[[UIApplication sharedApplication] delegate] resetHttpServerRoot];
+-(void)viewWillDisappear:(BOOL)animated {
+    [appDelegate resetHttpServerRoot];
+    [appDelegate stopHttpServer];
 }
 
 @end

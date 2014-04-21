@@ -8,8 +8,10 @@
 
 #import "PresentationsTableViewController.h"
 #import "PresentationViewController.h"
+#import "AppDelegate.h"
 
 #import "Presentation.h"
+#import "Settings.h"
 
 @interface PresentationsTableViewController ()
 
@@ -43,6 +45,11 @@
                                              selector:@selector(invalidPresentaionUploaded:)
                                                  name:@"invalidPresentaionUploaded"
                                                object:nil];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    if ([[Settings sharedManager] isUploadEnabled])
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] startHttpServer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,9 +162,10 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    [(PresentationViewController *)[segue destinationViewController] setPresentation:[_presentations objectAtIndex:indexPath.row]];
+    if ([segue.identifier isEqualToString:@"presentationSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [(PresentationViewController *)[segue destinationViewController] setPresentation:[_presentations objectAtIndex:indexPath.row]];
+    }
 }
 
 @end

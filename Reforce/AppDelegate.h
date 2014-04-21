@@ -18,5 +18,7 @@
 
 -(void) setHttpServerRootTo:(NSString *) path;
 -(void) resetHttpServerRoot;
+-(void) startHttpServer;
+-(void) stopHttpServer;
 
 @end

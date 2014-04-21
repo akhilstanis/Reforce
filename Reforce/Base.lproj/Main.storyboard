@@ -10,6 +10,7 @@
                 <navigationController definesPresentationContext="YES" id="4Fc-51-LWm" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="e1U-Ps-O7g">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.73333333329999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="0.0"/>
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-117" y="39"/>
         </scene>
-        <!--Presentations Table View Controller - REFORCE-->
+        <!--Presentations Table View Controller - Presentations-->
         <scene sceneID="EZn-Yf-Wi0">
             <objects>
                 <tableViewController id="d7D-ur-9tM" customClass="PresentationsTableViewController" sceneMemberID="viewController">
@@ -41,7 +42,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <segue destination="Fft-lD-asM" kind="modal" id="VP2-dd-mPF"/>
+                                    <segue destination="Fft-lD-asM" kind="modal" identifier="presentationSegue" id="VP2-dd-mPF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -50,7 +51,15 @@
                             <outlet property="delegate" destination="d7D-ur-9tM" id="uiR-T1-QCs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="REFORCE" id="8fz-68-g1n"/>
+                    <navigationItem key="navigationItem" title="Presentations" id="8fz-68-g1n">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6X9-ub-A37"/>
+                        <barButtonItem key="rightBarButtonItem" image="SettingsIcon" id="seN-6d-w0b">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="p1G-JZ-zFw" kind="push" identifier="settingsSegue" id="vob-vo-DhM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GZs-rA-YC4" id="PHn-U3-Le4"/>
                     </connections>
@@ -58,6 +67,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIn-Md-uUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="277" y="39"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="8nu-QB-PPI">
+            <objects>
+                <tableViewController id="p1G-JZ-zFw" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="c7I-38-wdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Nyh-ke-3I8">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Elv-V5-Nzj">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Elv-V5-Nzj" id="uwQ-gV-Ej3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYV-70-BDj">
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="enableUploadSwitchHandler:" destination="p1G-JZ-zFw" eventType="valueChanged" id="ZZW-Fw-e5T"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Upload" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF9-Qr-B5H">
+                                                    <rect key="frame" x="20" y="16" width="113" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="p1G-JZ-zFw" id="D3G-SP-cSz"/>
+                            <outlet property="delegate" destination="p1G-JZ-zFw" id="vmd-v7-EIp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="n4c-4C-SWc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9Za-3r-EfG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enableUploadSwitch" destination="FYV-70-BDj" id="XyS-Xx-BZN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfN-UL-PW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811" y="-342"/>
         </scene>
         <!--Presentation View Controller-->
         <scene sceneID="rzf-Q0-jAR">
@@ -102,9 +165,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSv-zE-Dfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="39"/>
+            <point key="canvasLocation" x="811" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SettingsIcon" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

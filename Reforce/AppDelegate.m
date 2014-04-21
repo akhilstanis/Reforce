@@ -16,6 +16,7 @@
 #import "RHTTPConnection.h"
 
 #import "Presentation.h"
+#import "Settings.h"
 
 #import <JPSVolumeButtonHandler.h>
 
@@ -53,7 +54,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    [httpServer start:nil];
+    if ([[Settings sharedManager] isUploadEnabled])
+        [self startHttpServer];
+
     [self setupVolumeButtons];
 }
 
@@ -84,12 +87,22 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 	[httpServer setConnectionClass:[RHTTPConnection class]];
 
-	NSError *error = nil;
-	if(![httpServer start:&error])
-	{
-		DDLogError(@"Error starting HTTP Server: %@", error);
-	}
+    if ([[Settings sharedManager] isUploadEnabled])
+        [self startHttpServer];
+}
 
+-(void) startHttpServer {
+    if (httpServer.isRunning)
+        return;
+
+    NSError *error = nil;
+    if(![httpServer start:&error])
+        DDLogError(@"Error starting HTTP Server: %@", error);
+}
+
+-(void) stopHttpServer {
+    if (httpServer.isRunning)
+        [httpServer stop];
 }
 
 -(void)setHttpServerRootTo:(NSString *)path {
