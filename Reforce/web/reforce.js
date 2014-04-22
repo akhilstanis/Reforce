@@ -192,6 +192,19 @@ if("WebSocket" in window) {
 
     var ws = new ReconnectingWebSocket("%%WEBSOCKET_URL%%");
 
+    var processCommand = function(cmd) {
+
+        if(typeof Reveal != "undefined") {
+            cmd == 'r' ? Reveal.right() : Reveal.left();
+            return;
+        }
+
+        if(typeof impress != "undefined") {
+            cmd == 'r' ? impress().next() : impress().prev();
+            return;
+        }
+    };
+
     ws.onopen = function() {
         // Web Socket is connected
         // alert("websocket is open");
@@ -205,7 +218,7 @@ if("WebSocket" in window) {
     ws.onmessage = function(evt) {
         // alert("received: " + evt.data);
         console.log('onMessage!');
-        evt.data == 'r' ? Reveal.right() : Reveal.left();
+        processCommand(evt.data);
     };
 
     ws.onclose = function() {
