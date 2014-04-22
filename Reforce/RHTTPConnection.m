@@ -112,7 +112,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 
 		NSDictionary *replacementDict = [NSDictionary dictionaryWithObject:wsLocation forKey:@"WEBSOCKET_URL"];
 
-		return [[HTTPDynamicFileResponse alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:@"reforce" ofType:@"js"]
+		return [[HTTPDynamicFileResponse alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:@"reforce" ofType:@"js" inDirectory:@"web"]
                                                    forConnection:self
                                                        separator:@"%%"
                                            replacementDictionary:replacementDict];
